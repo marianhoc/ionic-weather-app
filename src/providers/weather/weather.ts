@@ -15,7 +15,6 @@ export class WeatherProvider {
 	url;
 
   constructor(public http: Http) {
-    console.log('Hello WeatherProvider Provider');
   	this.url = 'http://api.wunderground.com/api/'+this.apiKey+'/geolookup/conditions/forecast/q/';
   }
 

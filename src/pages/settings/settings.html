@@ -7,40 +7,47 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>settings</ion-title>
+    <ion-title>Local</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 <ion-grid>
 	<ion-row>
-		<ion-col width-100> 
-		 	<ion-list>
-		 		<form (ngSubmit)="saveForm()">
-		 			<ion-item>
-		 				<ion-label fixed>
-		 					Cidade
-		 				</ion-label>
-		 				<ion-input [(ngModel)]="city" name="city" type="text" ></ion-input>
+	<ion-col> 
+	 	<ion-list>
+	 		<form (ngSubmit)="saveForm()">
+	 			<ion-item>
+	 				<ion-label text-center stacked>Cidade</ion-label>
+				 		<ion-select [(ngModel)]="city" name="city" type="text">
+							<ion-option value="Arraial do Cabo" >Arraial do cabo</ion-option>
+							<ion-option value="Buzios" >Buzios</ion-option>
+							<ion-option value="Rio de Janeiro" >Rio de Janeiro</ion-option>
+							<ion-option value="Mar del Plata" >Mar del Plata</ion-option>
+							<ion-option value="Buenos Aires" >Buenos Aires</ion-option>
+							<ion-option value="Sydney" >Sydney</ion-option>
+		 				</ion-select>
+	 			</ion-item>		 			
 
-		 			</ion-item>		 			
+	 			<ion-item>
+	 				<ion-label text-center stacked>Pais</ion-label>
+		 				<ion-select [(ngModel)]="state" name="state" type="text">
+	 						<ion-option value="Australia">Australia</ion-option>
+							<ion-option value="Argentina">Argentina</ion-option>
+							<ion-option value="Brazil">Brasil</ion-option>
+							<ion-option value="Chile">Chile</ion-option>
+		 				</ion-select>
+	 			</ion-item>
 
-		 			<ion-item>
-		 				<ion-label fixed>
-		 					Estado
-		 				</ion-label>
-		 				<ion-input [(ngModel)]="state" name="state" type="text" ></ion-input>
-		 			</ion-item>
+	 			<button ion-button type="submit" block >Salvar</button>
 
-		 			<button ion-button type="submit" block >Salvar</button>
+	 		</form>
 
-		 		</form>
-
-		 	</ion-list>
- 		</ion-col>
- 	</ion-row>
+	 	</ion-list>
+		</ion-col>
+		</ion-row>
  </ion-grid>
 
 
